@@ -1,0 +1,9 @@
+[package]
+name = "rune-casting"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rayon = "1.5"
+regex = "1.7"
+serde = { version = "1.0", features = ["derive"] } 
