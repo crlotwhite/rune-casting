@@ -1,14 +1,14 @@
-use crate::rune::Rune;
+use crate::spell::Spell;
 
 pub struct SkillTreeNode {
-    rune: Option<Box<dyn Rune>>,
-    children: Vec<SkillTreeNode>,
+    spell: Option<Box<dyn Spell>>, // 각 노드에서 실행할 Spell
+    children: Vec<SkillTreeNode>, // 자식 노드들
 }
 
 impl SkillTreeNode {
-    pub fn new(rune: Option<Box<dyn Rune>>) -> Self {
+    pub fn new(spell: Option<Box<dyn Spell>>) -> Self {
         Self {
-            rune,
+            spell,
             children: Vec::new(),
         }
     }
@@ -18,8 +18,8 @@ impl SkillTreeNode {
     }
 
     pub fn cast(&self, input: &str) -> String {
-        let result = if let Some(rune) = &self.rune {
-            rune.cast(input)
+        let result = if let Some(spell) = &self.spell {
+            spell.cast(input)
         } else {
             input.to_string()
         };

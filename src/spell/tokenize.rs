@@ -1,8 +1,8 @@
-use super::Rune;
+use super::Spell;
 
-pub struct TokenizerRune;
+pub struct TokenizeSpell;
 
-impl Rune for TokenizerRune {
+impl Spell for TokenizeSpell {
     fn cast(&self, input: &str) -> String {
         input.split_whitespace().collect::<Vec<&str>>().join("\n")
     }

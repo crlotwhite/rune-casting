@@ -1,9 +1,22 @@
 [package]
-name = "rune-casting"
-version = "0.1.0"
+name = "rune_casting"
+version = "0.0.1"
 edition = "2021"
+description = "A flexible text processing library based on Rune, Spell, and Casting."
+authors = ["NoelKM <crlotwhite@google.com>"]
+license = "MIT"
+repository = "https://github.com/crlotwhite/rune_casting"
+documentation = "https://docs.rs/rune_casting"
+homepage = "https://github.com/crlotwhite/rune_casting"
+keywords = ["text-processing", "nlp"]
+categories = ["text-processing", "data-processing"]
+readme = "README.md"
 
 [dependencies]
 rayon = "1.5"
 regex = "1.7"
-serde = { version = "1.0", features = ["derive"] } 
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+
+[dev-dependencies]
+rstest = "0.17"

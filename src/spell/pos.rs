@@ -1,18 +1,18 @@
 use std::collections::HashMap;
 
-use super::Rune;
+use super::Spell;
 
-pub struct PosTaggingRune {
+pub struct PosTaggingSpell {
     dictionary: HashMap<String, String>,
 }
 
-impl PosTaggingRune {
+impl PosTaggingSpell {
     pub fn new(dictionary: HashMap<String, String>) -> Self {
         Self { dictionary }
     }
 }
 
-impl Rune for PosTaggingRune {
+impl Spell for PosTaggingSpell {
     fn cast(&self, input: &str) -> String {
         input
             .lines()
